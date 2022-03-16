@@ -26,7 +26,7 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 
 const addOne = (arr) => {
   let newArray = arr.map((num) => {
-    return num + 1
+    return num + 1;
   });
   return newArray;
   // Solution code here...
@@ -40,7 +40,7 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   let newArray = arr.map((string) => {
-    return string + '?'
+    return string + '?';
   });
   return newArray;
   // Solution code here...
@@ -57,6 +57,12 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
+  let newArray = [];
+  for(let i = 0; i < arr.length; i++){
+    newArray = newArray + Math.pow(arr, i+1);
+  }
+  return newArray;
+
   // Solution code here...
 };
 
