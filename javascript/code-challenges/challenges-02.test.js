@@ -25,6 +25,10 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
+  let newArray = arr.map((num) => {
+    return num + 1
+  });
+  return newArray;
   // Solution code here...
 };
 
