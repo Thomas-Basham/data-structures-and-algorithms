@@ -59,9 +59,10 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 const forLoopTwoToThe = (arr) => {
   let newArray = [];
   for(let i = 0; i < arr.length; i++){
-    newArray = newArray + Math.pow(arr, i+1);
+    return arr.map((Math.pow(arr[i], i+1)){
+
+    )};  
   }
-  return newArray;
 
   // Solution code here...
 };
