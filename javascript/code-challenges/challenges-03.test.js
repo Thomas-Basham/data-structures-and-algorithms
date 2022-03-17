@@ -28,7 +28,10 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const typeNum = (arr) => {
-
+  let onlyNumbers = arr.filter(
+    element => typeof element === 'number'
+  );
+  return onlyNumbers;
   // Solution code here...
 };
 
