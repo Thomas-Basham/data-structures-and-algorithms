@@ -23,7 +23,7 @@ function lower(str) {
 
 const updateAnimal = (arr, callback) => {
 //   let newArray=[];
-//  let arr = newArray.push(lower);
+//  let arr = newArray.push(lower, upper);
 //   callback(arr);
 
   // Solution code here...
@@ -68,6 +68,10 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
+  arr.sort(function(a, b) {
+    return b - a;
+  });
+  return arr;
   // Solution code here...
 };
 
@@ -82,6 +86,9 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
+  arr.sort();
+  return arr;
+
   // Solution code here...
 };
 
