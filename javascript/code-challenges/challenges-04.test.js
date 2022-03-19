@@ -22,9 +22,9 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
-//   let newArray=[];
-//  let arr = newArray.push(lower, upper);
-//   callback(arr);
+  let newArray=[];
+ let arr = newArray.map(lower, upper);
+  callback(arr);
 
   // Solution code here...
 };
@@ -106,6 +106,7 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
+  return arr.sort((a,b) => a.price - b.price);
   // Solution code here...
 };
 
