@@ -12,12 +12,10 @@ Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
-  // let newArray = people.map((firstName, lastName) => {
-
-  //   return (people.firstName, people.lastName);
-
-  // });
-  // return newArray;
+  let newArray = people.map((element) => {
+    return (element.firstName + ' ' + element.lastName);
+  });
+  return newArray;
   // Solution code here...
 };
 
@@ -30,8 +28,8 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   let initialValue = 0;
-  let sum = arr.reduce((totalValue, currentValue) => totalValue + currentValue, initialValue);
-  return sum; 
+  return arr.reduce((totalValue, currentValue) => totalValue + currentValue, initialValue);
+ 
   // Solution code here...
 };
 
@@ -40,6 +38,7 @@ CHALLENGE 3
 
 Write a function named addPurchases that, given an array of objects as input, uses reduce to find the total amount purchased. Each object contains the keys `item` and `purchasePrice` like the example.
 
+const 
 {
   item: 'switch'
   purchasePrice: 399
@@ -48,6 +47,11 @@ Write a function named addPurchases that, given an array of objects as input, us
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
+  // let initialValue = 0;
+  return arr.reduce((totalValue, item) => item.purchasePrice + totalValue, 0);
+
+
+
   // Solution code here...
 };
 
@@ -60,6 +64,10 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
+  git
+  return arr.reduce((totalValue, currentValue,) => totalValue + currentValue, 0);
+
+
   // Solution code here...
 };
 
@@ -120,6 +128,8 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
+
+
   // Solution code here...
 };
 
