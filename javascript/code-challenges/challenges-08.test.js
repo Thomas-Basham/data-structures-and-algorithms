@@ -64,7 +64,7 @@ Write a function named containsW that takes in a string. This function should us
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
-  let reg = /\b(w)/g;
+  let reg = /(w)/;
   return reg.test(str);
   // Solution code here...
 };
