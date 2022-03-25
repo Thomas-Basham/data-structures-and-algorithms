@@ -105,6 +105,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
+  let reg = /[A-Z][a-zA-Z]*/gm;
+  return str.match(reg)||[];
   // Solution code here...
 };
 
@@ -115,6 +117,8 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
+  let reg = /^[A-J]/;
+  return arr.filter(element => reg.test(element));
   // Solution code here...
 };
 
