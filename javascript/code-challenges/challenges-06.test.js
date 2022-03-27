@@ -36,6 +36,8 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
+  const newString = str;
+  return newString + ' The end.';
   // Solution code here...
 };
 
@@ -53,6 +55,9 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
+  const newArr = arr;
+  newArr.push(arr[0]);
+  console.log(newArr);
   // Solution code here...
 };
 
@@ -72,6 +77,9 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
+  let originalObject = obj;
+  originalObject.yearBorn = year;
+
   // Solution code here...
 };
 
