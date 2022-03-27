@@ -53,7 +53,16 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  // Solution code here...
+  return charArray.sort((a, b) => {
+    if (a.children.length > b.children.length) {
+      return 1;
+    } else if (a.children.length < b.children.length) {
+      return -1;
+    } else {
+      return a.house > b.house ? 1 : -1;
+    }
+    // Solution code here...
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,6 +91,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
+  let reg = /[0-9]/;
+  return reg.test(input);
   // Solution code here...
 };
 
@@ -93,6 +104,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
+  let reg = /world/;
+  return reg.test(input);
   // Solution code here...
 };
 
