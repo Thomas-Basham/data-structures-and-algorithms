@@ -43,6 +43,8 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
+  let values = Object.values(obj);
+  return values.includes(value);
   // Solution code here...
 
 };
@@ -127,10 +129,11 @@ const characters = [
 ];
 
 const getHouses = (arr) => {
-  let houses = [];
+  let objValues = Object.values(arr);
+  let newValues = objValues.map((element) => element.house);
 
   // Solution code here...
-  return houses;
+  return newValues;
 };
 
 /*------------------------------------------------------------------------------------------------
@@ -150,13 +153,14 @@ const hasChildrenValues = (arr, character) => {
   arr.forEach(element => {
     if (element.name === character) {
       Object.keys(element).forEach((key, index) => {
-        
-      })
+        if (key === 'children'){
+          kid = Object.values(element)[index].length;
+        }
+      });
     }
-  })
-  return 
+  });
+  return kid ? true : false;
   // Solution code here...
-
 };
 
 /* ------------------------------------------------------------------------------------------------
