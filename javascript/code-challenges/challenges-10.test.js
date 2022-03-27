@@ -51,15 +51,19 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  let total = 0;
+  let newArr = [];
   let joined = matrix.join();
-  for (let i = 0; i < joined.length; i++) {
-    total += joined[i];
-  }
+  newArr.push(joined);
+  // console.log(newArr);
+  let crackArr = [];
+  let sum = newArr.reduce((previousValue, currentValue) => previousValue + currentValue);
+  console.log(sum);
+  crackArr.push(sum);
+  let final = crackArr.reduce((total, amount) => total + amount);
+  console.log(final);
+  return final; 
 
-  return total;
-
-  // Solution code here...
+  // Solution code here...  LOOOOLLLLLLLLLLLLLLL
 };
 
 
@@ -86,6 +90,15 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
+
+  for (let i = 0; i < hoursOpen.length; i++) {
+    let hourlyTotal = 0;
+    for (let j = 0; j < cookieStores.length; j++) {
+      hourlyTotal = hoursOpen[j] + cookieStores[i];
+      // console.log(hourlyTotal);
+    }
+    return hourlyTotal;
+  }
   // Solution code here...
 
 };
