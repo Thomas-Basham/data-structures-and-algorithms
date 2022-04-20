@@ -13,3 +13,5 @@ To run tests:
 ### 401 Data Structures, Code Challenges
 
 [Challenge 01](./python/code_challenges/CHALLENGE%2001/README.MD)
+
+[Challenge 02](./python/code_challenges/CHALLENGE%2002/README.MD)
