@@ -14,6 +14,6 @@ To run tests:
 
 [Challenge 01](./python/code_challenges/CHALLENGE%2001/README.MD)
 
-[Challenge 02](./python/code_challenges/CHALLENGE%2002/README.MD)
+[Challenge 02](./python/code_challenges/challenge%2002/README.md)
 
-[Challenge 03](./python/code_challenges/CHALLENGE%2003/README.MD)
+[Challenge 03](./python/code_challenges/challenge%2003/README.md)
