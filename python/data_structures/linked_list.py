@@ -48,9 +48,6 @@ class Node:
         self.value = value
         self.next = next_node
 
-    def __str__(self):
-        return str(self.value)
-
 
 class TargetError:
     pass
