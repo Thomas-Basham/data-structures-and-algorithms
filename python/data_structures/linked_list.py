@@ -39,11 +39,12 @@ class LinkedList:
         current = self.head
 
         # iterating until we reach the end of the linked list
-        while current is not None:
+        while current:
             # printing the node data
             # moving to the next node
-            # current = current.next
             return f'{{ {current.value} }} -> NULL'
+            # return ' -> '.join(Node.value)
+            # current = current.next
 
         return 'NULL'
 
