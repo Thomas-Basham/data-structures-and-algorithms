@@ -18,20 +18,16 @@ class LinkedList:
     def insert(self, value):
 
         new_node = Node(value)
-
         new_node.next = self.head
-
         self.head = new_node
 
     def includes(self, value):
 
         current = self.head
-
         while current:
             if current.value == value:
                 return True
             current = current.next
-
         return False
 
     def __str__(self):
@@ -52,9 +48,6 @@ class Node:
         self.value = value
         self.next = next_node
 
-    def __str__(self):
-        return str(self.value)
-
 
 class TargetError:
     pass
@@ -66,5 +59,4 @@ linked.insert("pear")
 linked.insert("banana")
 linked.insert("cucumber")
 linked.insert("orange")
-
 print(linked)
