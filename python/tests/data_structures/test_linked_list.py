@@ -35,7 +35,7 @@ def test_to_string_single():
     assert str(linked_list) == "{ apple } -> NULL"
 
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_to_string_double():
     linked_list = LinkedList()
 
