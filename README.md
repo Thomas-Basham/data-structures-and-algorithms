@@ -12,8 +12,12 @@ To run tests:
 
 ### 401 Data Structures, Code Challenges
 
-[Challenge 01](./python/code_challenges/CHALLENGE%2001/README.MD)
+[Challenge 01](./python/Other_Challenges/challenge%2001/README.MD)
 
-[Challenge 02](./python/code_challenges/challenge%2002/README.md)
+[Challenge 02](./python/Other_Challenges/challenge%2002/README.md)
 
-[Challenge 03](./python/code_challenges/challenge%2003/README.md)
+[Challenge 03](./python/Other_Challenges/challenge%2003/README.md)
+
+[Challenge 04 Code](./python/data_structures/linked_list.py)
+
+[Challenge 04 tests](./python/tests/data_structures/test_linked_list.py)
