@@ -1,7 +1,7 @@
 
 class LinkedList:
     """
-    * Can successfully instantiate an empty linked list
+    Can successfully instantiate an empty linked list
     Can properly insert into the linked list
     The head property will properly point to the first node in the linked list
     Can properly insert multiple nodes into the linked list
@@ -10,14 +10,14 @@ class LinkedList:
     Can properly return a collection of all the values that exist in the linked list
     """
 
-    def __init__(self, value=None):
+    def __init__(self, value='None'):
         self.head = None
         self.value = value
         self.next = next
 
-    def insert(self, new_value):
-        # creating a new Node with the current value
-        new_node = Node(new_value)
+    def insert(self, value):
+
+        new_node = Node(value)
 
         new_node.next = self.head
 
@@ -35,25 +35,36 @@ class LinkedList:
         return False
 
     def __str__(self):
-        # variable for iteration
+
         current = self.head
-
-        # iterating until we reach the end of the linked list
+        nodes = []
         while current:
-            # printing the node data
-            # moving to the next node
-            return f'{{ {current.value} }} -> NULL'
-            # return ' -> '.join(Node.value)
-            # current = current.next
-
-        return 'NULL'
+            nodes.append(current.value)
+            current = current.next
+        while nodes:
+            return ' -> '.join('{ ' + x + ' }' for x in nodes) + " -> NULL"
+        return "NULL"
 
 
-class Node(LinkedList):
-    def __int__(self, value):
+class Node:
+
+    def __init__(self, value=None, next_node=None):
         self.value = value
-        self.next = None
+        self.next = next_node
+
+    def __str__(self):
+        return str(self.value)
 
 
 class TargetError:
     pass
+
+
+linked = LinkedList()
+linked.insert("apple")
+linked.insert("pear")
+linked.insert("banana")
+linked.insert("cucumber")
+linked.insert("orange")
+
+print(linked)
