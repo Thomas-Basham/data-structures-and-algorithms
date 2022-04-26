@@ -1,14 +1,16 @@
 
+"""
+Can successfully instantiate an empty linked list
+Can properly insert into the linked list
+The head property will properly point to the first node in the linked list
+Can properly insert multiple nodes into the linked list
+Will return true when finding a value within the linked list that exists
+Will return false when searching for a value in the linked list that does not exist
+Can properly return a collection of all the values that exist in the linked list
+"""
+
+
 class LinkedList:
-    """
-    Can successfully instantiate an empty linked list
-    Can properly insert into the linked list
-    The head property will properly point to the first node in the linked list
-    Can properly insert multiple nodes into the linked list
-    Will return true when finding a value within the linked list that exists
-    Will return false when searching for a value in the linked list that does not exist
-    Can properly return a collection of all the values that exist in the linked list
-    """
 
     def __init__(self, value='None'):
         self.head = None
@@ -20,6 +22,28 @@ class LinkedList:
         new_node = Node(value)
         new_node.next = self.head
         self.head = new_node
+
+    def insert_before(self, target_value, value):
+        new_node = Node(value)
+        node = self.head
+        if node is None:
+            TargetError()
+        else:
+            # search nodes
+            if node.value == target_value:
+                new_node.next = self.head
+                self.head = new_node
+
+            while node.next is not None:
+                if node.next.value == target_value:
+                    new_node.next = node.next
+                    node.next = new_node
+                    return
+                else:
+                    node = node.next
+
+    def insert_after(self, before, after):
+        pass
 
     def append(self, value):
         new_node = Node(value)
@@ -48,7 +72,7 @@ class LinkedList:
             nodes.append(current.value)
             current = current.next
         while nodes:
-            return ' -> '.join('{ ' + x + ' }' for x in nodes) + " -> NULL"
+            return ' -> '.join('{ ' + node + ' }' for node in nodes) + ' -> NULL'
         return "NULL"
 
 
@@ -66,6 +90,7 @@ class TargetError:
 linked = LinkedList()
 linked.insert("apple")
 linked.insert("pear")
+linked.append('last')
 linked.insert("banana")
 linked.insert("cucumber")
 linked.insert("orange")
