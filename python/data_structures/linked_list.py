@@ -27,23 +27,28 @@ class LinkedList:
         new_node = Node(value)
         node = self.head
         if node is None:
-            TargetError()
+            raise TargetError('error')
         else:
-            # search nodes
             if node.value == target_value:
                 new_node.next = self.head
                 self.head = new_node
 
-            while node.next is not None:
+            while node.next:
                 if node.next.value == target_value:
                     new_node.next = node.next
                     node.next = new_node
-                    return
+                    break
                 else:
                     node = node.next
 
-    def insert_after(self, before, after):
-        pass
+    def insert_after(self, target_value, value):
+        new_node = Node(value)
+        node = self.head
+        while node:
+            if node.value == target_value:
+                new_node.next = node.next
+                node.next = new_node
+                break
 
     def append(self, value):
         new_node = Node(value)
@@ -83,7 +88,7 @@ class Node:
         self.next = next_node
 
 
-class TargetError:
+class TargetError(Exception):
     pass
 
 
