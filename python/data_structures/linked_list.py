@@ -12,7 +12,7 @@ Can properly return a collection of all the values that exist in the linked list
 
 class LinkedList:
 
-    def __init__(self, value='None'):
+    def __init__(self, value=None):
         self.head = None
         self.value = value
         self.next = next
@@ -68,11 +68,11 @@ class LinkedList:
         new_node = Node(value)
         node = self.head
 
-        while node.next:
-            node = node.next
         if node is None:
             self.head = new_node
             return
+        while node.next:
+            node = node.next
         node.next = new_node
 
     def __str__(self):
@@ -86,9 +86,28 @@ class LinkedList:
             return ' -> '.join('{ ' + node + ' }' for node in nodes) + ' -> NULL'
         return "NULL"
 
+    def kth_from_end(self, k):
+        n = 0
+        curr = self.head
+
+        # count the total number of nodes in the linked list
+        while curr:
+            curr = curr.next
+            n += 1
+        # if the total number of nodes is more than or equal to `k`
+        if n <= k or k < 0:
+            raise TargetError('yer outta range')
+        if n >= k:
+          # return (n-k+1)'th node from the beginning
+            curr = self.head
+            for i in range(n - (k+1)):
+                curr = curr.next
+
+        return curr.value
+
 
 class Node:
-    def __init__(self, value=None, next_node=None):
+    def __init__(self, value, next_node=None):
         self.value = value
         self.next = next_node
 
@@ -105,3 +124,4 @@ linked.append("banana")
 linked.append("cucumber")
 linked.append("tail")
 print(linked)
+print(linked.kth_from_end(3))
