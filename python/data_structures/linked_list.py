@@ -23,11 +23,24 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
+    def includes(self, value):
+
+        current = self.head
+        while current:
+            if current.value == value:
+                return True
+            current = current.next
+        return False
+
     def insert_before(self, target_value, value):
         new_node = Node(value)
         node = self.head
+
         if node is None:
-            raise TargetError('error')
+            raise TargetError('There are no Nodes to insert before')
+        if not self.includes(target_value):
+            raise TargetError(f'{{ {target_value} }} does not exist')
+
         else:
             if node.value == target_value:
                 new_node.next = self.head
@@ -41,6 +54,7 @@ class LinkedList:
                 else:
                     node = node.next
 
+
     def insert_after(self, target_value, value):
         new_node = Node(value)
         node = self.head
@@ -49,6 +63,9 @@ class LinkedList:
                 new_node.next = node.next
                 node.next = new_node
                 break
+            raise TargetError(f'{target_value} is missing')
+        if node is None:
+            raise TargetError(f'ERR')
 
     def append(self, value):
         new_node = Node(value)
@@ -60,17 +77,7 @@ class LinkedList:
             last = last.next
         last.next = new_node
 
-    def includes(self, value):
-
-        current = self.head
-        while current:
-            if current.value == value:
-                return True
-            current = current.next
-        return False
-
     def __str__(self):
-
         current = self.head
         nodes = []
         while current:
