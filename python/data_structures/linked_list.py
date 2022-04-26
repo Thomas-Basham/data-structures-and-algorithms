@@ -17,20 +17,21 @@ class LinkedList:
         self.value = value
         self.next = next
 
-    def insert(self, value):
-
-        new_node = Node(value)
-        new_node.next = self.head
-        self.head = new_node
-
     def includes(self, value):
+        node = self.head
 
-        current = self.head
-        while current:
-            if current.value == value:
+        while node:
+            if node.value == value:
                 return True
-            current = current.next
+            node = node.next
         return False
+
+    def insert(self, value):
+        new_node = Node(value)
+        node = self.head
+
+        new_node.next = node
+        self.head = new_node
 
     def insert_before(self, target_value, value):
         new_node = Node(value)
@@ -40,24 +41,20 @@ class LinkedList:
             raise TargetError('There are no Nodes to insert before')
         if not self.includes(target_value):
             raise TargetError(f'{{ {target_value} }} does not exist')
-
         else:
-            if node.value == target_value:
-                new_node.next = self.head
-                self.head = new_node
-
             while node.next:
                 if node.next.value == target_value:
                     new_node.next = node.next
                     node.next = new_node
                     break
-                else:
-                    node = node.next
-
+            if node.value == target_value:
+                new_node.next = node
+                self.head = new_node
 
     def insert_after(self, target_value, value):
         new_node = Node(value)
         node = self.head
+
         while node:
             if node.value == target_value:
                 new_node.next = node.next
@@ -65,31 +62,32 @@ class LinkedList:
                 break
             raise TargetError(f'{target_value} is missing')
         if node is None:
-            raise TargetError(f'ERR')
+            raise TargetError('There are no nodes')
 
     def append(self, value):
         new_node = Node(value)
-        if self.head is None:
+        node = self.head
+
+        while node.next:
+            node = node.next
+        if node is None:
             self.head = new_node
             return
-        last = self.head
-        while last.next:
-            last = last.next
-        last.next = new_node
+        node.next = new_node
 
     def __str__(self):
-        current = self.head
+        node = self.head
         nodes = []
-        while current:
-            nodes.append(current.value)
-            current = current.next
+
+        while node:
+            nodes.append(node.value)
+            node = node.next
         while nodes:
             return ' -> '.join('{ ' + node + ' }' for node in nodes) + ' -> NULL'
         return "NULL"
 
 
 class Node:
-
     def __init__(self, value=None, next_node=None):
         self.value = value
         self.next = next_node
@@ -100,10 +98,10 @@ class TargetError(Exception):
 
 
 linked = LinkedList()
-linked.insert("apple")
-linked.insert("pear")
+linked.insert("head")
+linked.append("pear")
 linked.append('last')
-linked.insert("banana")
-linked.insert("cucumber")
-linked.insert("orange")
+linked.append("banana")
+linked.append("cucumber")
+linked.append("tail")
 print(linked)
