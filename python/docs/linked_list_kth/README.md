@@ -7,7 +7,10 @@ Write the following method for the Linked List class:
         You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
 ## Whiteboard Process
-![whiteboard](White Board.png)
+[![whiteboard](White Board.png)]
+
+[White Board link](https://lucid.app/lucidspark/e6a34618-b8ec-45a4-a688-4da20e3a05c1/edit?invitationId=inv_105cf416-de25-4b9d-9dfb-e61c4a9b470b)
+
 ## Approach & efficiency
 
 ## Solution
