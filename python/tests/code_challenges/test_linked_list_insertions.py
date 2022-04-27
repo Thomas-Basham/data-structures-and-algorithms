@@ -48,6 +48,21 @@ def test_insert_after():
     assert str(linked_list) == "{ banana } -> { cucumber } -> { apple } -> NULL"
 
 
+@pytest.mark.skip("TODO")
+def test_insert_after_middle():
+    linked_list = LinkedList()
+
+    linked_list.insert("apple")
+
+    linked_list.insert("banana")
+
+    linked_list.insert("tomato")
+
+    linked_list.insert_after("banana", "cucumber")
+
+    assert str(linked_list) == "{ tomato } -> { banana } -> { cucumber } -> { apple } -> NULL"
+
+
 def test_insert_before_empty():
     linked_list = LinkedList()
 
