@@ -1,18 +1,7 @@
 
-"""
-Can successfully instantiate an empty linked list
-Can properly insert into the linked list
-The head property will properly point to the first node in the linked list
-Can properly insert multiple nodes into the linked list
-Will return true when finding a value within the linked list that exists
-Will return false when searching for a value in the linked list that does not exist
-Can properly return a collection of all the values that exist in the linked list
-"""
-
-
 class LinkedList:
 
-    def __init__(self, value='None'):
+    def __init__(self, value=None):
         self.head = None
         self.value = value
         self.next = next
@@ -68,11 +57,12 @@ class LinkedList:
         new_node = Node(value)
         node = self.head
 
-        while node.next:
-            node = node.next
         if node is None:
             self.head = new_node
             return
+
+        while node.next:
+            node = node.next
         node.next = new_node
 
     def __str__(self):
@@ -82,13 +72,32 @@ class LinkedList:
         while node:
             nodes.append(node.value)
             node = node.next
+
         while nodes:
             return ' -> '.join('{ ' + node + ' }' for node in nodes) + ' -> NULL'
         return "NULL"
 
+    def kth_from_end(self, k):
+        nodes = 0
+        node = self.head
+        # count the nodes
+        while node:
+            node = node.next
+            nodes += 1
+
+        if nodes >= k:
+            current = self.head
+            for i in range(nodes - (k+1)):
+                current = current.next
+
+        if nodes <= k or k < 0:
+            raise TargetError('yer outta range')
+
+        return current.value
+
 
 class Node:
-    def __init__(self, value=None, next_node=None):
+    def __init__(self, value, next_node=None):
         self.value = value
         self.next = next_node
 
@@ -100,8 +109,11 @@ class TargetError(Exception):
 linked = LinkedList()
 linked.insert("head")
 linked.append("pear")
-linked.append('last')
 linked.append("banana")
+linked.append("avocado")
 linked.append("cucumber")
 linked.append("tail")
+# linked.insert_after("banana", "cucumber")
 print(linked)
+print(linked.kth_from_end(2))
+print(linked.kth_from_end(3))
