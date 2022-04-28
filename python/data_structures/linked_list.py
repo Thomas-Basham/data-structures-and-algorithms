@@ -1,7 +1,7 @@
 
 class LinkedList:
 
-    def __init__(self, value=None):
+    def __init__(self, value='None'):
         self.head = None
         self.value = value
         self.next = next
@@ -74,7 +74,7 @@ class LinkedList:
             node = node.next
 
         while nodes:
-            return ' -> '.join('{ ' + node + ' }' for node in nodes) + ' -> NULL'
+            return ' -> '.join('{ ' + str(node) + ' }' for node in nodes) + ' -> NULL'
         return "NULL"
 
     def kth_from_end(self, k):
@@ -97,7 +97,7 @@ class LinkedList:
 
 
 class Node:
-    def __init__(self, value, next_node=None):
+    def __init__(self, value=None, next_node=None):
         self.value = value
         self.next = next_node
 
