@@ -6,6 +6,7 @@ def zip_lists(a, b):
         return b
     if b.head is None:
         return a
+
     while a_node and b_node:
         # store next pointers
         a_next = a_node.next
@@ -16,6 +17,5 @@ def zip_lists(a, b):
         # drive
         a_node = a_next
         b_node = b_next
-
     return a
 

@@ -27,3 +27,8 @@ To run tests:
 [Challenge 07 README](python/docs/linked_list_kth/README.md)
 
 [Challenge 07 Code](python/data_structures/linked_list.py)
+
+[Challenge 08 README](python/docs/linked_list_zip)
+
+[Challenge 08 Code](python/code_challenges/linked_list_zip.py)
+
