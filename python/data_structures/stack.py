@@ -1,4 +1,5 @@
-from python.data_structures.linked_list import LinkedList, Node
+from data_structures.linked_list import LinkedList, Node
+from data_structures.invalid_operation_error import InvalidOperationError
 
 class Stack:
     """
@@ -21,13 +22,29 @@ is empty
 
     def __init__(self):
         self.top = None
-        pass
+        self.size = 0
 
     def push(self, value):
-        if self.top is None:
-            self.top = Node(value, None)
-            return
         self.top = Node(value, self.top)
+        self.size += 1
+
+    def __len__(self):
+        return self.size
+
+    def is_empty(self):
+        return self.size == 0
 
     def pop(self):
+        if self.is_empty():
+            raise InvalidOperationError
+        temp = self.top
+        if self.top:
+            self.top = self.top.next
+        temp.next = None
+        self.size -= 1
+        return temp.value
 
+    def peek(self):
+        if self.is_empty():
+            raise InvalidOperationError
+        return self.top.value
