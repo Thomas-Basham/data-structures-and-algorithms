@@ -95,6 +95,16 @@ class LinkedList:
 
         return current.value
 
+    def reverse(self):
+        prev = None
+        current = self.head
+        while current:
+            next_ = current.next
+            current.next = prev
+            prev = current
+            current = next_
+        self.head = prev
+
 
 class Node:
     def __init__(self, value=None, next_node=None):
@@ -115,5 +125,7 @@ linked.append("cucumber")
 linked.append("tail")
 # linked.insert_after("banana", "cucumber")
 print(linked)
-print(linked.kth_from_end(2))
-print(linked.kth_from_end(3))
+linked.reverse()
+print(linked)
+# print(linked.kth_from_end(2))
+# print(linked.kth_from_end(3))
