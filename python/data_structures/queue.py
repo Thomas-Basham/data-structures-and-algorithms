@@ -1,5 +1,5 @@
-from data_structures.linked_list import Node
-from data_structures.invalid_operation_error import InvalidOperationError
+from linked_list import Node, LinkedList
+from invalid_operation_error import InvalidOperationError
 class Queue:
     """
 enqueue
@@ -21,10 +21,6 @@ is empty
     def __init__(self):
         self.front = self.tail = None
         self.size = 0
-        pass
-
-    def __len__(self):
-        return self.size
 
     def is_empty(self):
         return self.size == 0
@@ -36,15 +32,45 @@ is empty
             return
         self.tail.next = temp
         self.tail = temp
+        self.size += 1
 
     def dequeue(self):
-        # method body here
-        pass
+
+        if self.tail is None:
+            raise InvalidOperationError
+        temp = self.front
+        self.front = self.front.next
+
+        if self.front is None:
+            self.tail = None
+        self.size -= 1
+
+        return temp.value
 
     def peek(self):
-        # method body here
-        pass
+      if self.front:
+          return self.front.value
+      else:
+          raise InvalidOperationError
 
-    def is_empty(self):
-        # method body here
-        pass
+    def __str__(self):
+
+        node = self.front
+        nodes = []
+
+        while node:
+            nodes.append(node.value)
+            node = node.next
+
+        while nodes:
+            return ' -> '.join('{ ' + str(node) + ' }' for node in nodes) + ' -> NULL'
+        return "NULL"
+
+
+q = Queue()
+q.enqueue("front")
+q.enqueue("next")
+q.enqueue("last")
+q.dequeue()
+
+print(q)

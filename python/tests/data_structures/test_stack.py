@@ -61,6 +61,12 @@ def test_pop_until_empty():
     assert actual == expected
 
 
+def test_is_empty():
+    s = Stack()
+    actual = s.is_empty()
+    expected = True
+    assert actual == expected
+
 def test_peek():
     s = Stack()
     s.push("apple")

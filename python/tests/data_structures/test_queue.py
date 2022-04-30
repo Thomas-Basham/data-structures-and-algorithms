@@ -15,7 +15,6 @@ def test_enqueue():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
 def test_dequeue():
     q = Queue()
     q.enqueue("apple")
@@ -25,7 +24,6 @@ def test_dequeue():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
 def test_peek():
     q = Queue()
     q.enqueue("apple")
@@ -69,7 +67,6 @@ def test_dequeue_when_empty():
         q.dequeue()
 
 
-@pytest.mark.skip("TODO")
 def test_dequeue_when_full():
     q = Queue()
     q.enqueue("apples")
@@ -90,7 +87,6 @@ def test_peek_post_dequeue():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
 def test_is_empty():
     q = Queue()
     actual = q.is_empty()
@@ -98,7 +94,6 @@ def test_is_empty():
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
 def test_exhausted():
     q = Queue()
     q.enqueue("apple")
