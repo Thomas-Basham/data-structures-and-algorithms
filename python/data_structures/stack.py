@@ -1,11 +1,13 @@
-from linked_list import Node
-from invalid_operation_error import InvalidOperationError
+from data_structures.linked_list import Node
+from data_structures.invalid_operation_error import InvalidOperationError
+
 
 class Stack:
     """
 push
     Arguments: value
-    adds a new node with that value to the top of the stack with an O(1) Time performance.
+    adds a new node with that value to the top of the stack
+    with an O(1) Time performance.
 pop
     Arguments: none
     Returns: the value from node from the top of the stack

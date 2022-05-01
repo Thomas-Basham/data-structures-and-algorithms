@@ -67,6 +67,7 @@ def test_is_empty():
     expected = True
     assert actual == expected
 
+
 def test_peek():
     s = Stack()
     s.push("apple")
