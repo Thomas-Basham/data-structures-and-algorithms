@@ -1,5 +1,7 @@
-from linked_list import Node, LinkedList
-from invalid_operation_error import InvalidOperationError
+import sys
+
+from data_structures.linked_list import Node, LinkedList
+from data_structures.invalid_operation_error import InvalidOperationError
 class Queue:
     """
 enqueue
@@ -23,7 +25,7 @@ is empty
         self.size = 0
 
     def is_empty(self):
-        return self.size == 0
+        return self.size == 0 or self.front is None
 
     def enqueue(self, value):
         temp = Node(value)
@@ -43,8 +45,8 @@ is empty
 
         if self.front is None:
             self.tail = None
-        self.size -= 1
 
+        self.size -= 1
         return temp.value
 
     def peek(self):
@@ -68,9 +70,25 @@ is empty
 
 
 q = Queue()
-q.enqueue("front")
-q.enqueue("next")
-q.enqueue("last")
-q.dequeue()
+print(
+  """
+***********      Let's make a queue!     ************************
+*********** enter the first queue item to start  ****************
+***********      enter 'q' to quit       ************************
+  """
+)
 
-print(q)
+
+# This almost works :)
+def user_queue():
+    response = ''
+    while response != 'q':
+        response = input("> ")
+        q.enqueue(response)
+        print(f'You added {{ {response} }}')
+        print('Add another?')
+    if response == 'q':
+        print(f'Your Queue is: \n {q}')
+
+
+user_queue()
