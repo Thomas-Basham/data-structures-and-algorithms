@@ -91,4 +91,5 @@ def user_queue():
         print(f'Your Queue is: \n {q}')
 
 
-user_queue()
+if __name__ == "__main__":
+    user_queue()
