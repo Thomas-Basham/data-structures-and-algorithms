@@ -1,7 +1,7 @@
 import sys
 
-from linked_list import Node, LinkedList
-from invalid_operation_error import InvalidOperationError
+from data_structures.linked_list import Node, LinkedList
+from data_structures.invalid_operation_error import InvalidOperationError
 class Queue:
     """
 enqueue
