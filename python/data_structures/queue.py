@@ -1,7 +1,7 @@
 import sys
 
-from data_structures.linked_list import Node, LinkedList
-from data_structures.invalid_operation_error import InvalidOperationError
+from linked_list import Node, LinkedList
+from invalid_operation_error import InvalidOperationError
 class Queue:
     """
 enqueue
@@ -88,6 +88,8 @@ def user_queue():
         print(f'You added {{ {response} }}')
         print('Add another?')
     if response == 'q':
+        q.dequeue()
+        q.dequeue()
         print(f'Your Queue is: \n {q}')
 
 
