@@ -13,6 +13,7 @@
             Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
 
 ## [Whiteboard Process](https://lucid.app/lucidchart/73028309-1621-4968-aeba-a9bdc577354c/edit?invitationId=inv_bf55f357-dfe2-4af6-ae20-0a04d87d4790)
+<img alt="white board" src="Implement a Queue using two Stacks.png">
 
 ## Approach & Efficiency
 When it's all said and done, these methods will have an efficiency of O(1)
