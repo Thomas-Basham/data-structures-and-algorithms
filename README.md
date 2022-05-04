@@ -4,8 +4,7 @@
 
 ### 301 Code Challenges
 
-To run tests:
-
+To run JavaScript tests:
 - Change to the `javascript` folder
 - run `npm test` to run all of the tests
 - run `npm test challenges-##` to only run tests for challenge ## (i.e. 01)
@@ -31,4 +30,14 @@ To run tests:
 [Challenge 08 README](python/docs/linked_list_zip)
 
 [Challenge 08 Code](python/code_challenges/linked_list_zip.py)
+
+[Challenge 10 README](python/docs/stack_and_queue)
+
+[Challenge 10 Code Stack](python/data_structures/stack.py)
+
+[Challenge 10 Code Queue](python/data_structures/queue.py)
+
+[Challenge 11 README](python/docs/stack_queue_pseudo)
+
+[Challenge 11 Code Pseudo-Queue](python/code_challenges/stack_queue_pseudo.py)
 
