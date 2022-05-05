@@ -7,6 +7,7 @@ def test_validates_two_square_brackets():
     expected = True
     assert actual == expected
 
+
 def test_fails_two_square_brackets_flipped():
     actual = multi_bracket_validation("][")
     expected = False
@@ -54,3 +55,8 @@ def test_mismatched():
     actual = multi_bracket_validation("[}")
     expected = False
     assert actual == expected
+
+def test_random():
+  actual = multi_bracket_validation("(([[[((([}}})))")
+  expected = False
+  assert actual == expected
