@@ -1,25 +1,20 @@
 from data_structures.queue import Queue
 
-open_list = ["[","{","("]
-close_list = ["]","}",")"]
 
-
-def multi_bracket_validation(lst):
+def multi_bracket_validation(string):
     d = {'(': ')', '{': '}', '[': ']'}
     q = Queue()
 
-    if lst[0] == ')' or lst[0] == '}' or lst[0] == ']':
+    if string[0] == ')' or string[0] == '}' or string[0] == ']':
         return False
 
-    for item in lst:
+    for item in string:
         if item == '(' or item == '{' or item == '[':
             q.enqueue(item)
 
         elif item == ')' or item == '}' or item == ']':
             value = q.dequeue()
-            # if d[value] != item:
-            #     return False
-            if value not in d:
+            if d[value] != item:
                 return False
 
         else:

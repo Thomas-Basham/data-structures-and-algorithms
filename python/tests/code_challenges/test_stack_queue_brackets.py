@@ -51,6 +51,17 @@ def test_nested():
     assert actual == expected
 
 
+def test_round_nested():
+  actual = multi_bracket_validation("((((((((((()))))))))))")
+  expected = True
+  assert actual == expected
+
+
+def test_round_nested_uneven():
+  actual = multi_bracket_validation("(((((((((())))))")
+  expected = False
+  assert actual == expected
+
 def test_mismatched():
     actual = multi_bracket_validation("[}")
     expected = False
