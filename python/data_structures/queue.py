@@ -24,6 +24,9 @@ is empty
         self.front = self.tail = None
         self.size = 0
 
+    def __len__(self):
+        return self.size
+
     def is_empty(self):
         return self.size == 0 or self.front is None
 
