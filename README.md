@@ -45,3 +45,9 @@ To run JavaScript tests:
 
 [Challenge 13 Code Queue-Brackets](python/code_challenges/stack_queue_brackets.py)
 
+[Challenge 15 README](python/docs/trees)
+
+[Challenge 15 Code Binary Tree](python/data_structures/binary_tree.py)
+
+[Challenge 15 Code Binary Search Tree](python/data_structures/binary_search_tree.py)
+
