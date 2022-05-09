@@ -37,7 +37,11 @@ To run JavaScript tests:
 
 [Challenge 10 Code Queue](python/data_structures/queue.py)
 
-[Challenge 11 README](python/docs/stack_queue_pseudo)
+[Challenge 12 README](python/docs/stack_queue_animal_shelter)
 
-[Challenge 11 Code Pseudo-Queue](python/code_challenges/stack_queue_pseudo.py)
+[Challenge 12 Code Animal-Shelter](python/code_challenges/stack_queue_animal_shelter.py)
+
+[Challenge 13 README](python/docs/stack_queue_brackets)
+
+[Challenge 13 Code Queue-Brackets](python/code_challenges/stack_queue_brackets.py)
 
