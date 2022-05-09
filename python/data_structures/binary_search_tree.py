@@ -1,15 +1,49 @@
-from data_structures.binary_tree import BinaryTree
+from data_structures.binary_tree import BinaryTree, Node
+"""
+"""
 
 
 class BinarySearchTree(BinaryTree):
-    """
-    Put docstring here
-    """
 
-    def __init__(self):
-        # initialization here
-        pass
+    def add(self, value):
+        if value is None:
+            return
+        node = Node(value)
+        if self.root is None:
+            self.root = node
+            return
 
-    def some_method(self):
-        # method body here
-        pass
+        def traverse(root, new_node):
+
+            if new_node.value < root.value:
+
+                if root.left is not None:
+                    traverse(root.left, new_node)
+                else:
+                    root.left = new_node
+            else:
+
+                if root.right is not None:
+                    traverse(root.right, new_node)
+                else:
+                    root.right = new_node
+        traverse(self.root, node)
+
+    def contains(self, val):
+
+        def search(root, value):
+
+            if root is None:
+                return False
+
+            elif root.value == value:
+                return True
+
+            elif root.value < value:
+                return search(root.right, value)
+
+            else:
+                return search(root.left, value)
+        return search(self.root, val)
+
+

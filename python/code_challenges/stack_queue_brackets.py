@@ -14,7 +14,7 @@ def multi_bracket_validation(string):
 
         elif item == ')' or item == '}' or item == ']':
             value = q.dequeue()
-            if d[value] != item:
+            if d[value] != item:  # If dequeued value doesn't
                 return False
 
         else:

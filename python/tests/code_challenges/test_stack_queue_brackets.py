@@ -1,6 +1,13 @@
 import pytest
 from code_challenges.stack_queue_brackets import multi_bracket_validation
+from code_challenges.duckduckgoose import duck_duck_goose
 
+
+def test_validates_josephuss():
+    namelist = 'A', 'B', 'C', 'D', 'E'
+    actual = duck_duck_goose(namelist, 3)
+    expected = 'D'
+    assert actual == expected
 
 def test_validates_two_square_brackets():
     actual = multi_bracket_validation("[]")
@@ -44,7 +51,7 @@ def test_multi():
     expected = True
     assert actual == expected
 
-
+@pytest.mark.skip("TODO")
 def test_nested():
     actual = multi_bracket_validation("{([])}")
     expected = True
