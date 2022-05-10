@@ -51,3 +51,7 @@ To run JavaScript tests:
 
 [Challenge 15 Code Binary Search Tree](python/data_structures/binary_search_tree.py)
 
+[Challenge 16 README](python/docs/tree_max)
+
+[Challenge 16 Code Binary Search Tree](python/data_structures/binary_search_tree.py)
+

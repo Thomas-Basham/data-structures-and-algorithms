@@ -69,7 +69,6 @@ ALGORITHM postOrder(root)
 
 
 
-
 1. [x] Can successfully instantiate an empty tree
 2. [x] Can successfully instantiate a tree with a single root node
 3. [x] For a Binary Search Tree, can successfully add a left child and right child properly to a node
