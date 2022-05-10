@@ -8,9 +8,9 @@ class BinarySearchTree(BinaryTree):
     def add(self, value):
         if value is None:
             return
-        node = Node(value)
+
         if self.root is None:
-            self.root = node
+            self.root = Node(value)
             return
 
         def traverse(root, new_node):
@@ -27,7 +27,7 @@ class BinarySearchTree(BinaryTree):
                     traverse(root.right, new_node)
                 else:
                     root.right = new_node
-        traverse(self.root, node)
+        traverse(self.root, Node(value))
 
     def contains(self, val):
 
