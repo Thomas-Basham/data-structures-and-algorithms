@@ -53,10 +53,10 @@ is empty
         return temp.value
 
     def peek(self):
-      if self.front:
-          return self.front.value
-      else:
-          raise InvalidOperationError
+        if self.front:
+            return self.front.value
+        else:
+            raise InvalidOperationError
 
     def __str__(self):
 
@@ -68,18 +68,19 @@ is empty
             node = node.next
 
         while nodes:
-            return ' -> '.join('{ ' + str(node) + ' }' for node in nodes) + ' -> NULL'
+            # return ' -> '.join('{ ' + str(node) + ' }' for node in nodes) + ' -> NULL'
+            return ', '.join(str(node)for node in nodes)
         return "NULL"
 
 
 q = Queue()
-print(
-  """
-***********      Let's make a queue!     ************************
-*********** enter the first queue item to start  ****************
-***********      enter 'q' to quit       ************************
-  """
-)
+# print(
+#   """
+# ***********      Let's make a queue!     ************************
+# *********** enter the first queue item to start  ****************
+# ***********      enter 'q' to quit       ************************
+#   """
+# )
 
 
 # This almost works :)
@@ -96,5 +97,5 @@ def user_queue():
         print(f'Your Queue is: \n {q}')
 
 
-if __name__ == "__main__":
-    user_queue()
+# if __name__ == "__main__":
+#     user_queue()

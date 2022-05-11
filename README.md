@@ -55,3 +55,7 @@ To run JavaScript tests:
 
 [Challenge 16 Code Binary Search Tree](python/data_structures/binary_search_tree.py)
 
+[Challenge 17 README](python/docs/tree_breadth_first)
+
+[Challenge 17 Code Tree Breadth First](python/code_challenges/tree_breadth_first.py)
+
