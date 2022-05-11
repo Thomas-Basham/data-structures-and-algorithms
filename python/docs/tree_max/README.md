@@ -19,3 +19,5 @@ The efficiency of this operation is O(n)
 
 ## Solution
 [Challenge 16 Code Binary Search Tree](/data_structures/binary_search_tree.py)
+
+
