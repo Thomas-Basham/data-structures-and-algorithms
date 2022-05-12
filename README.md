@@ -59,3 +59,4 @@ To run JavaScript tests:
 
 [Challenge 17 Code Tree Breadth First](python/code_challenges/tree_breadth_first.py)
 
+[Challenge 18 README](python/docs/tree_fizz_buzz)

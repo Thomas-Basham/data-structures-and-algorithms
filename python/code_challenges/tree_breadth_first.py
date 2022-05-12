@@ -42,3 +42,25 @@ def breadth_first(tree):
             q.enqueue(front.right)
 
     return values
+
+
+
+def fizz_buzz_tree(k_ary_tree):
+    breadth_first_order = breadth_first(k_ary_tree)
+    result = []
+    for node in breadth_first_order:
+        if node % 3 == 0 and node % 5 == 0:
+            result.append("fizzbuzz")
+
+        elif node % 3 == 0:
+            result.append("fizz")
+
+        elif node % 5 == 0:
+            result.append("buzz")
+
+        else:
+            result.append(str(node))
+    for i in result:
+        K_ary_tree().add(i)
+    return K_ary_tree
+
