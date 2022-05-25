@@ -1,5 +1,5 @@
 # Merge Sort
-[Code](/code_challenges/merge_sort.py)
+[Code](./code_challenges/merge_sort.py)
 
 
 ## Start with this list
