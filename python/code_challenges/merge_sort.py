@@ -11,8 +11,8 @@ def merge_sort(lst):
         merge_sort(right)
 
         merge(left, right, lst)
-
     print(f"Sorted List: {lst}")
+    return lst
 
 
 def merge(left, right, lst):
