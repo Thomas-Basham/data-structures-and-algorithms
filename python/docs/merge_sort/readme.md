@@ -1,4 +1,6 @@
 # Merge Sort
+[Code](/code_challenges/merge_sort.py)
+
 
 ## Start with this list
 lst = [8, 4, 23, 42, 16, 15]
