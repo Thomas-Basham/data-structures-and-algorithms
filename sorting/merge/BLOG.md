@@ -1,6 +1,7 @@
 # Merge Sort
 [Code](/python/code_challenges/merge_sort.py)
 
+[Tests](/python/tests/code_challenges/test_merge_sort.py)
 
 ## Start with this list
 lst = [8, 4, 23, 42, 16, 15]
