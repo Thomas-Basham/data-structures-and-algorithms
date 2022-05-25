@@ -21,6 +21,7 @@ def test_single_node():
     actual = breadth_first(tree)
     assert actual == expected
 
+
 def test_two_nodes():
     tree = BinaryTree()
     tree.root = Node("apples")
