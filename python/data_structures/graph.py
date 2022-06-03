@@ -54,11 +54,11 @@ class Graph:
 
 class Vertex:
     def __init__(self, value):
-          self.value = value
+        self.value = value
 
 
 class Edge:
     def __init__(self, vertex, weight):
-          self.vertex = vertex
-          self.weight = weight
+        self.vertex = vertex
+        self.weight = weight
 
