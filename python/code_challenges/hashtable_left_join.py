@@ -37,8 +37,9 @@ Output:
 
 def left_join(synonyms, antonyms):
     ht = Hashtable()
-    syn_ant_list = []
     ant_keys_list = antonyms.keys()
+    syn_ant_list = []
+
     for k, v in synonyms.items():
         ht.set(k, v)
 
